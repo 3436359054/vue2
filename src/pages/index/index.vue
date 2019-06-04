@@ -2,7 +2,7 @@
 <div class="index">
   <IndexHeader/>
   <IndexBanner :list="swiper"></IndexBanner>
-  <div>swiper</div>
+  <IndexIcons :list="iconsData"></IndexIcons>
 </div>
 </template>
 
@@ -10,15 +10,18 @@
 import axios from 'axios'
 import IndexHeader from './header'
 import IndexBanner from './banner'
+import IndexIcons from './icons'
 export default {
   name: 'Index',
   components: {
     IndexHeader,
-    IndexBanner
+    IndexBanner,
+    IndexIcons
   },
   data () {
     return {
-      swiper: []
+      swiper: [],
+      iconsData: []
     }
   },
   methods: {
@@ -30,6 +33,7 @@ export default {
     handleGetSucc (res) {
       if (res.data.ret) {
         this.swiper = res.data.swiper
+        this.iconsData = res.data.iconsData
       }
     },
     handleGetErr () {

@@ -21,5 +21,67 @@
       "imgUrl": "static/images/banner3.jpg",
       "link": "/city"
     }
+  ],
+  "iconsData": [
+    {
+      "id": "#010",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+      "link": "/list",
+      "des": "城隍庙"
+    },
+    {
+      "id": "#011",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+      "link": "/list",
+      "des": "外滩"
+    },
+    {
+      "id": "#012",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+      "link": "/list",
+      "des": "城隍庙"
+    },
+    {
+      "id": "#013",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+      "link": "/list",
+      "des": "城隍庙"
+    },
+    {
+      "id": "#014",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+      "link": "/list",
+      "des": "城隍庙"
+    },
+    {
+      "id": "#015",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+      "link": "/list",
+      "des": "城隍庙"
+    },
+    {
+      "id": "#016",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+      "link": "/list",
+      "des": "城隍庙"
+    },
+    {
+      "id": "#017",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+      "link": "/list",
+      "des": "城隍庙"
+    },
+    {
+      "id": "#018",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+      "link": "/list",
+      "des": "城隍庙"
+    },
+    {
+      "id": "#019",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+      "link": "/list",
+      "des": "城隍庙"
+    }
   ]
 }
