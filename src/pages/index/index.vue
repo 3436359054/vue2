@@ -1,8 +1,8 @@
 <template>
 <div class="index">
   <IndexHeader/>
-  <IndexBanner/>
-  <div>hhhhhhhh</div>
+  <IndexBanner :list="swiper"></IndexBanner>
+  <div>swiper</div>
 </div>
 </template>
 
@@ -16,6 +16,11 @@ export default {
     IndexHeader,
     IndexBanner
   },
+  data () {
+    return {
+      swiper: []
+    }
+  },
   methods: {
     handleGetData () {
       axios.get('static/index.json')
@@ -23,10 +28,12 @@ export default {
         .catch(this.handleGetErr.bind(this))
     },
     handleGetSucc (res) {
-      console.log(res)
+      if (res.data.ret) {
+        this.swiper = res.data.swiper
+      }
     },
     handleGetErr () {
-      console.log('hhhhhhhhhh')
+      console.log('hhhErr')
     }
   },
   created () {

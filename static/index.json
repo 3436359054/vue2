@@ -1,3 +1,25 @@
 {
-  "ret":true
+  "ret": true,
+  "swiper": [
+    {
+      "id": "#001",
+      "imgUrl": "static/images/banner0.jpg",
+      "link": "/city"
+    },
+    {
+      "id": "#002",
+      "imgUrl": "static/images/banner1.jpg",
+      "link": "/city"
+    },
+    {
+      "id": "#003",
+      "imgUrl": "static/images/banner2.jpg",
+      "link": "/city"
+    },
+    {
+      "id": "#004",
+      "imgUrl": "static/images/banner3.jpg",
+      "link": "/city"
+    }
+  ]
 }
