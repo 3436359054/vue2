@@ -32,7 +32,9 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-// .swiper-pagination >>>
+@import "../../assets/stylus/varibles.styl"
+.swiper-pagination >>> .swiper-pagination-bullet-active
+  background: $bgColor
 .bgContaner {
   overflow: hidden
   height: 0
