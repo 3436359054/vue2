@@ -1,5 +1,5 @@
 <template>
-  <swiper :options="swiperOption">
+  <swiper v-if="pageList.length" :options="swiperOption">
     <swiper-slide v-for="(page,index) of pageList" :key="index">
       <div class="icons">
           <a class="icons_item" v-for="item of page" :key="item.id" :href="item.link">
@@ -23,7 +23,8 @@ export default {
       swiperOption: {
         pagination: {
           el: '.swiper-pagination'
-        }
+        },
+        loop: true
       }
     }
   },

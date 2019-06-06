@@ -83,5 +83,26 @@
       "link": "/list",
       "des": "城隍庙"
     }
-  ]
+  ],
+  "sightData":[{
+    "id":"#020",
+    "imgUrl":"static/images/sight1.jpg",
+    "link":"/list",
+    "title":"上海迪士尼乐园",
+    "lv":"4",
+    "people":"222435",
+    "price":"188",
+    "area":"浦东新区",
+    "desc":"全球最大的迪士尼城堡"
+  },{
+    "id":"#021",
+    "imgUrl":"static/images/sight1.jpg",
+    "link":"/list",
+    "title":"上海欢乐谷",
+    "lv":"5",
+    "people":"31235",
+    "price":"210",
+    "area":"松江区",
+    "desc":"赶上1200米长的过山车吗"
+  }]
 }

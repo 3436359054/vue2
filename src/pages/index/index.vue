@@ -3,6 +3,7 @@
   <IndexHeader/>
   <IndexBanner :list="swiper"></IndexBanner>
   <IndexIcons :list="iconsData"></IndexIcons>
+  <IndexSight :list="sightData"></IndexSight>
 </div>
 </template>
 
@@ -11,30 +12,32 @@ import axios from 'axios'
 import IndexHeader from './header'
 import IndexBanner from './banner'
 import IndexIcons from './icons'
+import IndexSight from './sight'
 export default {
   name: 'Index',
   components: {
     IndexHeader,
     IndexBanner,
-    IndexIcons
+    IndexIcons,
+    IndexSight
   },
   data () {
     return {
       swiper: [],
-      iconsData: []
+      iconsData: [],
+      sightData: []
     }
   },
   methods: {
     handleGetData () {
-      axios.get('static/index.json')
+      axios.get('/ap/index.json')
         .then(this.handleGetSucc.bind(this))
         .catch(this.handleGetErr.bind(this))
     },
     handleGetSucc (res) {
-      if (res.data.ret) {
-        this.swiper = res.data.swiper
-        this.iconsData = res.data.iconsData
-      }
+      this.swiper = res.data.swiper
+      this.iconsData = res.data.iconsData
+      this.sightData = res.data.sightData
     },
     handleGetErr () {
       console.log('hhhErr')

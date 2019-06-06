@@ -1,12 +1,12 @@
 <template>
-  <swiper v-if="list.length>1" :options="swiperOption">
+<div class="bgContaner">
+  <swiper v-if="list.length" :options="swiperOption">
     <swiper-slide v-for="item in list" :key="item.id">
-      <div class="bgContaner">
         <img class="bgImg" :src="item.imgUrl" alt>
-      </div>
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
+  </div>
 </template>
 
 <script>

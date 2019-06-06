@@ -5,6 +5,7 @@ import FastClick from 'fastclick'
 import vueSwiper from 'vue-awesome-swiper'
 import '@/assets/css/reset.css'
 import '@/assets/css/iconfont/iconfont.css'
+import '@/assets/css/iconfont/start/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 Vue.use(vueSwiper)
 FastClick.attach(document.body)
