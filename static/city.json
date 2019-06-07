@@ -1,0 +1,42 @@
+{
+  "jet": true,
+  "selectCity":"苏格拉底",
+  "hotCity": [
+    {
+      "link": "/",
+      "cityName": "北京"
+    },
+    {
+      "link": "/",
+      "cityName": "上海"
+    },
+    {
+      "link": "/",
+      "cityName": "天津"
+    },
+    {
+      "link": "/",
+      "cityName": "成都"
+    },
+    {
+      "link": "/",
+      "cityName": "成都"
+    },
+    {
+      "link": "/",
+      "cityName": "成都"
+    },
+    {
+      "link": "/",
+      "cityName": "成都"
+    },
+    {
+      "link": "/",
+      "cityName": "成都"
+    },
+    {
+      "link": "/",
+      "cityName": "成都"
+    }
+  ]
+}

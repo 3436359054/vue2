@@ -1,6 +1,6 @@
 <template>
 <div class="index">
-  <IndexHeader/>
+  <IndexHeader :city="localCity"></IndexHeader>
   <IndexBanner :list="swiper"></IndexBanner>
   <IndexIcons :list="iconsData"></IndexIcons>
   <IndexSight :list="sightData"></IndexSight>
@@ -13,6 +13,7 @@ import IndexHeader from './header'
 import IndexBanner from './banner'
 import IndexIcons from './icons'
 import IndexSight from './sight'
+
 export default {
   name: 'Index',
   components: {
@@ -25,16 +26,18 @@ export default {
     return {
       swiper: [],
       iconsData: [],
-      sightData: []
+      sightData: [],
+      localCity: ''
     }
   },
   methods: {
     handleGetData () {
-      axios.get('/ap/index.json')
+      axios.get('/ap/index.json?city='+this.$store.city)
         .then(this.handleGetSucc.bind(this))
         .catch(this.handleGetErr.bind(this))
     },
     handleGetSucc (res) {
+      this.localCity = res.data.localCity
       this.swiper = res.data.swiper
       this.iconsData = res.data.iconsData
       this.sightData = res.data.sightData
