@@ -72,7 +72,6 @@ export default {
         padding-bottom: .64rem
         font-size: .24rem
         line-height: .24rem
-        height: .4rem
         i
           color: #ff8300
           font-size: .4rem

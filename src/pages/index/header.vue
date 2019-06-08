@@ -2,24 +2,16 @@
 <div class="header">
   <div class="back iconfont">&#xe624;</div>
   <div class="seach"><i class="seach_bar iconfont">&#xe632;</i>请输入要搜索的内容</div>
-  <div class="bar"><router-link class="bar_link" to="/city">{{city}}</router-link></div>
+  <div class="bar"><router-link class="bar_link" to="/city">{{$store.state.city}}</router-link></div>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexHeader',
-  props: {
-    city: String
-  },
-  data () {
-    return {
-    }
-  }
+  name: 'IndexHeader'
 }
 </script>
 <style lang="stylus" scoped>
-// 632
 @import "../../assets/stylus/varibles.styl"
 .header
   display: flex
@@ -46,6 +38,10 @@ export default {
     line-height: .88rem
     padding-right:.55rem
     color: #fff
+    max-width: 1.6rem
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
     &:before
       position: absolute
       right: .25rem

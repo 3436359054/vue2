@@ -7,16 +7,16 @@
     </div>
   </div>
   <div class="localCity">
-    当前城市: {{selectCity}}
+    当前城市: {{city}}
   </div>
   <div class="hotCity">
     <div class="hotCity_title">热门城市:</div>
     <div class="hotCity_box">
-      <ul @click="handleSelectCity($event)">
-        <li class="hotCity_item"
+      <ul>
+        <li class="hotCity_item" @click="handleSelectCity"
           v-for="(item, index) of list"
           :key="index">
-         <router-link :to="item.link">{{item.cityName}}</router-link>
+          {{item.cityName}}
         </li>
       </ul>
     </div>
@@ -25,18 +25,24 @@
 </template>
 
 <script>
+import {mapState, mapMutations} from 'vuex'
 export default {
   name: 'cityHeader',
   props: {
-    list: Array,
-    selectCity: String
+    list: Array
   },
   data () {
     return {
     }
   },
+  computed: {
+    ...mapState(['city'])
+  },
   methods: {
+    ...mapMutations(['changeIndexCity']),
     handleSelectCity (e) {
+      this.changeIndexCity(e.target.innerHTML)
+      this.$router.go(-1)
     }
   }
 }
@@ -81,8 +87,9 @@ export default {
       flex-wrap: wrap
       margin-right: -1px
       .hotCity_item
+        box-sizing: border-box
         height: .85rem
-        width: 33.09%
+        width: 33.333%
         border-right: 1px solid #cccccc
         border-bottom: 1px solid #cccccc
         text-align: center

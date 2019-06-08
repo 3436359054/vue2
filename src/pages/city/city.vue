@@ -1,6 +1,6 @@
 <template>
 <div class="city">
-  <cityHeader :list="hotCity" :selectCity="selectCity"></cityHeader>
+  <cityHeader :list="hotCity"></cityHeader>
 </div>
 </template>
 
@@ -14,8 +14,7 @@ export default {
   },
   data () {
     return {
-      hotCity: [],
-      selectCity: ''
+      hotCity: []
     }
   },
   methods: {
@@ -26,7 +25,6 @@ export default {
     },
     handleGetSucc (res) {
       this.hotCity = res.data.hotCity
-      this.selectCity = res.data.selectCity
     },
     handleGetErr () {
       console.log('hhhErr')

@@ -1,6 +1,6 @@
 <template>
 <div class="index">
-  <IndexHeader :city="localCity"></IndexHeader>
+  <IndexHeader></IndexHeader>
   <IndexBanner :list="swiper"></IndexBanner>
   <IndexIcons :list="iconsData"></IndexIcons>
   <IndexSight :list="sightData"></IndexSight>
@@ -13,6 +13,7 @@ import IndexHeader from './header'
 import IndexBanner from './banner'
 import IndexIcons from './icons'
 import IndexSight from './sight'
+import {mapState, mapMutations} from 'vuex'
 
 export default {
   name: 'Index',
@@ -26,28 +27,50 @@ export default {
     return {
       swiper: [],
       iconsData: [],
-      sightData: [],
-      localCity: ''
+      sightData: []
+    }
+  },
+  computed: {
+    ...mapState({
+      city: 'city'
+    }),
+    screenSize () {
+      return parseInt(window.screen.width / 375 * 50)
     }
   },
   methods: {
+    ...mapMutations({
+      changeCity: 'changeCity'
+    }),
     handleGetData () {
-      axios.get('/ap/index.json?city='+this.$store.city)
+      axios.get('/ap/index.json?city=' + this.city)
         .then(this.handleGetSucc.bind(this))
         .catch(this.handleGetErr.bind(this))
     },
     handleGetSucc (res) {
-      this.localCity = res.data.localCity
+      if (!this.city) {
+        this.changeCity(res.data.localCity)
+      }
       this.swiper = res.data.swiper
       this.iconsData = res.data.iconsData
       this.sightData = res.data.sightData
     },
     handleGetErr () {
       console.log('hhhErr')
+    },
+    handleHtmlFontSize () {
+      document.documentElement.style.cssText = 'font-size:' + this.screenSize + 'px'
+    }
+  },
+  watch: {
+    city () {
+      this.handleGetData()
     }
   },
   created () {
     this.handleGetData()
+    this.handleHtmlFontSize()
+    console.log(this.screenSize)
   }
 }
 </script>
