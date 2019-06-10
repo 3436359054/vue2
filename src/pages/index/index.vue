@@ -1,10 +1,10 @@
 <template>
-<div class="index">
-  <IndexHeader></IndexHeader>
-  <IndexBanner :list="swiper"></IndexBanner>
-  <IndexIcons :list="iconsData"></IndexIcons>
-  <IndexSight :list="sightData"></IndexSight>
-</div>
+  <div class="index">
+    <IndexHeader></IndexHeader>
+    <IndexBanner :list="swiper"></IndexBanner>
+    <IndexIcons :list="iconsData"></IndexIcons>
+    <IndexSight :list="sightData"></IndexSight>
+  </div>
 </template>
 
 <script>
@@ -42,18 +42,22 @@ export default {
     ...mapMutations({
       changeCity: 'changeCity'
     }),
-    handleGetData () {
+    getIndexData () {
       axios.get('/ap/index.json?city=' + this.city)
         .then(this.handleGetSucc.bind(this))
         .catch(this.handleGetErr.bind(this))
     },
     handleGetSucc (res) {
-      if (!this.city) {
-        this.changeCity(res.data.localCity)
+      if (res && res.data && res.data.ret) {
+        if (!this.city) {
+          this.changeCity(res.data.localCity)
+        }
+        this.swiper && (this.swiper = res.data.swiper)
+        this.iconsData && (this.iconsData = res.data.iconsData)
+        this.sightData && (this.sightData = res.data.sightData)
+      } else {
+        this.handleGetErr()
       }
-      this.swiper = res.data.swiper
-      this.iconsData = res.data.iconsData
-      this.sightData = res.data.sightData
     },
     handleGetErr () {
       console.log('hhhErr')
@@ -64,13 +68,14 @@ export default {
   },
   watch: {
     city () {
-      this.handleGetData()
+      this.getIndexData()
     }
   },
   created () {
-    this.handleGetData()
+    // 获取首页数据
+    this.getIndexData()
+    // 处理不同设备比例
     this.handleHtmlFontSize()
-    console.log(this.screenSize)
   }
 }
 </script>

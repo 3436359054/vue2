@@ -1,0 +1,45 @@
+{
+  "ret": true,
+  "sights": [{
+    "id":"#030",
+    "imgUrl":"static/images/sight1.jpg",
+    "link":"/list",
+    "title":"上海东方明珠",
+    "lv":"4",
+    "people":"222435",
+    "price":"188",
+    "area":"浦东新区",
+    "desc":"全球最大的迪士尼城堡"
+  },{
+    "id":"#031",
+    "imgUrl":"static/images/sight1.jpg",
+    "link":"/list",
+    "title":"上海东方明珠",
+    "lv":"4",
+    "people":"222435",
+    "price":"188",
+    "area":"浦东新区",
+    "desc":"全球最大的迪士尼城堡"
+  },{
+    "id":"#032",
+    "imgUrl":"static/images/sight1.jpg",
+    "link":"/list",
+    "title":"上海东方明珠",
+    "lv":"4",
+    "people":"222435",
+    "price":"188",
+    "area":"浦东新区",
+    "desc":"全球最大的迪士尼城堡"
+  },{
+    "id":"#033",
+    "imgUrl":"static/images/sight1.jpg",
+    "link":"/list",
+    "title":"上海东方明珠",
+    "lv":"4",
+    "people":"222435",
+    "price":"188",
+    "area":"浦东新区",
+    "desc":"全球最大的迪士尼城堡"
+  }]
+
+}

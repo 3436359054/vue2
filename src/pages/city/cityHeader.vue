@@ -13,7 +13,7 @@
     <div class="hotCity_title">热门城市:</div>
     <div class="hotCity_box">
       <ul>
-        <li class="hotCity_item" @click="handleSelectCity"
+        <li class="hotCity_item" :class="{hotCity_active:item.cityName===city}" @click="handleSelectCity"
           v-for="(item, index) of list"
           :key="index">
           {{item.cityName}}
@@ -41,7 +41,7 @@ export default {
   methods: {
     ...mapMutations(['changeIndexCity']),
     handleSelectCity (e) {
-      this.changeIndexCity(e.target.innerHTML)
+      this.changeIndexCity(e.target.innerText)
       this.$router.go(-1)
     }
   }
@@ -94,4 +94,6 @@ export default {
         border-bottom: 1px solid #cccccc
         text-align: center
         line-height: .85rem
+      .hotCity_active
+        color: red
 </style>

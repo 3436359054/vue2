@@ -1,20 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import state from './state'
+import getters from './getters'
+import mutations from './mutations'
+import actions from './actions'
 Vue.use(Vuex)
 
-let store = new Vuex.Store({
-  state: {
-    city: localStorage.city || ''
-  },
-  mutations: {
-    changeCity (state, changeCity) {
-      state.city = changeCity
-      localStorage.city = changeCity
-    },
-    changeIndexCity (state, changeIndexCity) {
-      state.city = changeIndexCity
-      localStorage.city = changeIndexCity
-    }
-  }
+export default new Vuex.Store({
+  state,
+  mutations,
+  getters,
+  actions
 })
-export default store

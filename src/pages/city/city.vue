@@ -24,7 +24,7 @@ export default {
         .catch(this.handleGetErr.bind(this))
     },
     handleGetSucc (res) {
-      this.hotCity = res.data.hotCity
+      this.hotCity && (this.hotCity = res.data.hotCity)
     },
     handleGetErr () {
       console.log('hhhErr')

@@ -1,6 +1,6 @@
 {
   "ret": true,
-  "localCity": "墨尔本",
+  "localCity": "上海",
   "swiper": [
     {
       "id": "#001",
@@ -97,6 +97,26 @@
     "desc":"全球最大的迪士尼城堡"
   },{
     "id":"#021",
+    "imgUrl":"static/images/sight1.jpg",
+    "link":"/list",
+    "title":"上海欢乐谷",
+    "lv":"5",
+    "people":"31235",
+    "price":"210",
+    "area":"松江区",
+    "desc":"赶上1200米长的过山车吗"
+  },{
+    "id":"#022",
+    "imgUrl":"static/images/sight1.jpg",
+    "link":"/list",
+    "title":"上海欢乐谷",
+    "lv":"5",
+    "people":"31235",
+    "price":"210",
+    "area":"松江区",
+    "desc":"赶上1200米长的过山车吗"
+  },{
+    "id":"#023",
     "imgUrl":"static/images/sight1.jpg",
     "link":"/list",
     "title":"上海欢乐谷",
