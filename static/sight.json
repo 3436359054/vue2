@@ -3,7 +3,7 @@
   "sights": [{
     "id":"#030",
     "imgUrl":"static/images/sight1.jpg",
-    "link":"/list",
+    "link":"/details/030",
     "title":"上海东方明珠",
     "lv":"4",
     "people":"222435",
@@ -13,7 +13,7 @@
   },{
     "id":"#031",
     "imgUrl":"static/images/sight1.jpg",
-    "link":"/list",
+    "link":"/details/031",
     "title":"上海东方明珠",
     "lv":"4",
     "people":"222435",
@@ -23,7 +23,7 @@
   },{
     "id":"#032",
     "imgUrl":"static/images/sight1.jpg",
-    "link":"/list",
+    "link":"/details/032",
     "title":"上海东方明珠",
     "lv":"4",
     "people":"222435",
@@ -33,7 +33,7 @@
   },{
     "id":"#033",
     "imgUrl":"static/images/sight1.jpg",
-    "link":"/list",
+    "link":"/details/033",
     "title":"上海东方明珠",
     "lv":"4",
     "people":"222435",

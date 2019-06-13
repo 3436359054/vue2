@@ -4,6 +4,7 @@
     <IndexBanner :list="swiper"></IndexBanner>
     <IndexIcons :list="iconsData"></IndexIcons>
     <IndexSight :list="sightData"></IndexSight>
+    <IndexDownload></IndexDownload>
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import IndexHeader from './header'
 import IndexBanner from './banner'
 import IndexIcons from './icons'
 import IndexSight from './sight'
+import IndexDownload from './download'
 import {mapState, mapMutations} from 'vuex'
 
 export default {
@@ -21,7 +23,8 @@ export default {
     IndexHeader,
     IndexBanner,
     IndexIcons,
-    IndexSight
+    IndexSight,
+    IndexDownload
   },
   data () {
     return {
@@ -81,4 +84,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.index
+  position: fixed
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  display: flex
+  flex-direction: column
 </style>

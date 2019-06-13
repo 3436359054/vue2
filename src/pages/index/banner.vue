@@ -1,11 +1,11 @@
 <template>
-<div class="bgContaner">
-  <swiper v-if="list.length" :options="swiperOption">
-    <swiper-slide v-for="item in list" :key="item.id">
-        <img class="bgImg" :src="item.imgUrl" alt>
-    </swiper-slide>
-    <div class="swiper-pagination" slot="pagination"></div>
-  </swiper>
+  <div class="bgContaner">
+    <swiper v-if="list.length>0" :options="swiperOption">
+      <swiper-slide v-for="item in list" :key="item.id">
+          <img class="bgImg" :src="item.imgUrl" alt>
+      </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
   </div>
 </template>
 
@@ -18,6 +18,8 @@ export default {
   data () {
     return {
       swiperOption: {
+        observer: true,
+        observerParents: true,
         pagination: {
           el: '.swiper-pagination'
         },
@@ -35,13 +37,10 @@ export default {
 @import "../../assets/stylus/varibles.styl"
 .swiper-pagination >>> .swiper-pagination-bullet-active
   background: $bgColor
-.bgContaner {
+.bgContaner
   overflow: hidden
   height: 0
   padding-bottom: 41.7%
-
-  .bgImg {
+  .bgImg
     width: 100%
-  }
-}
 </style>

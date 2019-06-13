@@ -111,7 +111,8 @@ menu {
 }
 
 fieldset,
-img {
+img,
+input {
   border: 0
 }
 

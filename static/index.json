@@ -27,68 +27,68 @@
     {
       "id": "#010",
       "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-      "link": "/list",
+      "link": "/list/#010",
       "des": "城隍庙"
     },
     {
       "id": "#011",
       "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-      "link": "/list",
+      "link": "/list/#011",
       "des": "外滩"
     },
     {
       "id": "#012",
       "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-      "link": "/list",
+      "link": "/list/#012",
       "des": "城隍庙"
     },
     {
       "id": "#013",
       "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-      "link": "/list",
+      "link": "/list/#013",
       "des": "城隍庙"
     },
     {
       "id": "#014",
       "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-      "link": "/list",
+      "link": "/list/#014",
       "des": "城隍庙"
     },
     {
       "id": "#015",
       "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-      "link": "/list",
+      "link": "/list//#015",
       "des": "城隍庙"
     },
     {
       "id": "#016",
       "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-      "link": "/list",
+      "link": "/list/#016",
       "des": "城隍庙"
     },
     {
       "id": "#017",
       "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-      "link": "/list",
+      "link": "/list/#017",
       "des": "城隍庙"
     },
     {
       "id": "#018",
       "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-      "link": "/list",
+      "link": "/list//#018",
       "des": "城隍庙"
     },
     {
-      "id": "#019",
+      "id": "#019/",
       "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-      "link": "/list",
+      "link": "/list/#019",
       "des": "城隍庙"
     }
   ],
   "sightData":[{
     "id":"#020",
     "imgUrl":"static/images/sight1.jpg",
-    "link":"/list",
+    "link":"/details/020",
     "title":"上海迪士尼乐园",
     "lv":"4",
     "people":"222435",
@@ -98,7 +98,7 @@
   },{
     "id":"#021",
     "imgUrl":"static/images/sight1.jpg",
-    "link":"/list",
+    "link":"/details/021",
     "title":"上海欢乐谷",
     "lv":"5",
     "people":"31235",
@@ -108,7 +108,7 @@
   },{
     "id":"#022",
     "imgUrl":"static/images/sight1.jpg",
-    "link":"/list",
+    "link":"/details/022",
     "title":"上海欢乐谷",
     "lv":"5",
     "people":"31235",
@@ -118,7 +118,7 @@
   },{
     "id":"#023",
     "imgUrl":"static/images/sight1.jpg",
-    "link":"/list",
+    "link":"/details/023",
     "title":"上海欢乐谷",
     "lv":"5",
     "people":"31235",

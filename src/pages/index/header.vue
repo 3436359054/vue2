@@ -16,6 +16,7 @@ export default {
 .header
   display: flex
   height: .88rem
+  width: 100%
   background: $bgColor
   text-align: center
   .back

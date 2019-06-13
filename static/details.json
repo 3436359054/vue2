@@ -1,0 +1,14 @@
+{
+  "ret": true,
+  "banner": {
+    "imgUrl": "//img1.qunarzz.com/sight/p0/1611/42/424e28ec1c8fff29a3.water.jpg_600x330_0a05bbbd.jpg",
+    "link": "/"
+  },
+  "commonBanner": [
+    "static/images/banner0.jpg",
+    "static/images/banner1.jpg",
+    "static/images/banner2.jpg",
+    "static/images/banner3.jpg",
+    "static/images/banner3.jpg"
+  ]
+}
