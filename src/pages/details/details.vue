@@ -1,11 +1,15 @@
 <template>
 <div class="details">
+  <DetailsHeader></DetailsHeader>
   <detailsBanner :banner="banner" :list="list"></detailsBanner>
+  <list></list>
 </div>
 </template>
 
 <script>
-import detailsBanner from './detailsBanner.vue'
+import detailsBanner from './detailsBanner'
+import List from './list'
+import DetailsHeader from './header'
 import axios from 'axios'
 export default {
   name: 'Details',
@@ -19,7 +23,9 @@ export default {
     }
   },
   components: {
-    detailsBanner
+    detailsBanner,
+    List,
+    DetailsHeader
   },
   methods: {
     getDetailsData () {
