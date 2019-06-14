@@ -1,3 +1,4 @@
 export default {
-  city: localStorage.city || ''
+  city: localStorage.city || '',
+  downloadShow: true
 }

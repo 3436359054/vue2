@@ -1,14 +1,29 @@
 <template>
-<div class="details">
-  <img class="details_img" :src="banner.imgUrl" alt="">
+<div>
+  <div class="details" @click="handleClick">
+    <img class="details_img" :src="banner.imgUrl" alt="">
+  </div>
+  <Draw :list="list" ref="Draw"></Draw>
 </div>
+
 </template>
 
 <script>
+import Draw from '@/components/common/drawloop'
 export default {
   name: 'detailsBanne',
   props: {
-    banner: Object
+    banner: Object,
+    list: Array
+  },
+
+  components: {
+    Draw
+  },
+  methods: {
+    handleClick () {
+      this.$refs.Draw.drawShow = true
+    }
   }
 }
 </script>

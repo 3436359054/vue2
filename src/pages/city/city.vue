@@ -1,22 +1,24 @@
 <template>
-<div class="city">
-  <cityHeader :list="hotCity" :allList="allCity"></cityHeader>
-  <cityList :list="allCity" ref="allListCity"></cityList>
-  <cityBar :list="allCity" @changeLetter="handleChangeLetter"></cityBar>
-</div>
+    <div class="city">
+      <download>下载可用</download>
+      <cityHeader :list="hotCity" :allList="allCity"></cityHeader>
+      <cityList :list="allCity" ref="allListCity"></cityList>
+      <cityBar :list="allCity" @changeLetter="handleChangeLetter"></cityBar>
+    </div>
 </template>
-
 <script>
 import axios from 'axios'
 import cityHeader from './cityHeader'
 import cityList from './cityList'
 import cityBar from './cityBar'
+import download from '@/components/common/download'
 export default {
   name: 'City',
   components: {
     cityHeader,
     cityList,
-    cityBar
+    cityBar,
+    download
   },
   data () {
     return {
@@ -50,7 +52,7 @@ export default {
 
 <style lang="stylus" scoped>
 .city
-  position: fixed
+  position: absolute
   left: 0
   top: 0
   right: 0

@@ -1,6 +1,6 @@
 <template>
 <div class="details">
-  <detailsBanner :banner="banner"></detailsBanner>
+  <detailsBanner :banner="banner" :list="list"></detailsBanner>
 </div>
 </template>
 
@@ -14,7 +14,8 @@ export default {
   },
   data () {
     return {
-      banner: {}
+      banner: {},
+      list: []
     }
   },
   components: {
@@ -32,6 +33,7 @@ export default {
     handleDetailsDataSucc (res) {
       if (res && res.data && res.data.ret) {
         res.data.banner && (this.banner = res.data.banner)
+        res.data.commonBanner && (this.list = res.data.commonBanner)
       }
     },
     handleDetailsDataErr () {

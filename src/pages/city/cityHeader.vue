@@ -157,7 +157,7 @@ export default {
     ul
       display: flex
       flex-wrap: wrap
-      margin-right: -1px
+      margin-bottom: -1px
       .hotCity_item
         box-sizing: border-box
         height: .85rem
@@ -166,6 +166,8 @@ export default {
         border-bottom: 1px solid #cccccc
         text-align: center
         line-height: .85rem
+      .hotCity_item:nth-of-type(3n)
+        border-right: 0
       .hotCity_active
         color: $bgColor
 </style>

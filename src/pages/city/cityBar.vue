@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     getCityBar (key) {
-      this.$emit('changeLetter',key)
+      this.$emit('changeLetter', key)
     }
   }
 }

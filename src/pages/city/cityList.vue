@@ -73,4 +73,6 @@ export default {
           border-bottom: 1px solid #ddd
           border-right: 1px solid #ddd
           color: #212121
+        .city_item:nth-of-type(4n+0)
+          border-right: 0
 </style>
