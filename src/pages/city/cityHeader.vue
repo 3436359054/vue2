@@ -9,11 +9,13 @@
   <div class="seach">
       <input class="seach_input" placeholder="请输入搜索城市" @input="handleSearchCity" type="text">
   </div>
+  <!-- 搜索关键字列表框 -->
   <div class="seach_list" ref="seachScroll" v-show="searchCity">
     <ul>
       <li class="seach_list_item" v-for="(item, index) of filterResult" :key="index">{{item.name}}</li>
     </ul>
   </div>
+
   <div class="localCity">
     当前城市: {{city}}
   </div>
@@ -34,6 +36,7 @@
 
 <script>
 import {mapState, mapMutations} from 'vuex'
+import {debounce} from '@/utils/utils.js'
 import Bscroll from 'better-scroll'
 export default {
   name: 'cityHeader',
@@ -44,7 +47,8 @@ export default {
   data () {
     return {
       searchCity: false,
-      filterResult: []
+      filterResult: [],
+      even: null
     }
   },
   computed: {
@@ -69,8 +73,13 @@ export default {
       this.$router.push('/')
     },
     handleSearchCity (e) {
+      // 点击搜索框让列表显示
       this.searchCity = true
-      let val = e.target.value.toLowerCase()
+      this.even = e
+      debounce(this.handledebounce)()
+    },
+    handledebounce () {
+      let val = this.even.target.value.toLowerCase()
       if (val) {
         this.filterResult = this.listData.filter((item) => {
           if (item.name.indexOf(val) > -1 || item.spall.indexOf(val) > -1) {

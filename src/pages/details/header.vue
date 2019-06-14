@@ -7,11 +7,6 @@
 <script>
 export default {
   name: 'DetailsHeader',
-  data () {
-    return {
-
-    }
-  },
   methods: {
     handleScroll () {
       let opc = document.documentElement.scrollTop / 200
